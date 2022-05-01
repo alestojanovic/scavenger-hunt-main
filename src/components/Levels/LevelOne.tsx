@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { StyleSheet, css } from "aphrodite";
-import { useLock } from "../utils";
-import { PrivateRoutes } from "../PrivateRoutes";
-import { MessageTwo, PromptMessage } from "../Messages";
+import { useLock } from "../../utils";
+import { PrivateRoutes } from "../../PrivateRoutes";
+import { LevelOneMessages, PromptMessages } from "../../Messages";
 
 const styles = StyleSheet.create({
   unlockButton: {
@@ -47,7 +47,7 @@ const styles = StyleSheet.create({
   },
 });
 
-export const Two = () => {
+export const LevelOne = () => {
   const navigate = useNavigate();
   const [unLockNavigation, setUnlockNavigation] = useState(true);
 
@@ -55,7 +55,7 @@ export const Two = () => {
     navigate(`${PrivateRoutes.PARAM_THREE}`);
   };
 
-  useLock(`${PromptMessage.DENY}`, unLockNavigation);
+  useLock(`${PromptMessages.DENY}`, unLockNavigation);
 
   const handleUnlockNavigation = () => {
     setUnlockNavigation(false);
@@ -68,10 +68,10 @@ export const Two = () => {
         onClick={handleUnlockNavigation}
       >
         {" "}
-        {MessageTwo.UNLOCK}{" "}
+        {LevelOneMessages.UNLOCK}{" "}
       </button>
 
-      <h3>{MessageTwo.HINT}</h3>
+      <h3>{LevelOneMessages.HINT}</h3>
 
       <button
         className={css(
@@ -80,7 +80,7 @@ export const Two = () => {
         onClick={routeChange}
       >
         {" "}
-        {MessageTwo.CONTINUE}{" "}
+        {LevelOneMessages.CONTINUE}{" "}
       </button>
     </div>
   );

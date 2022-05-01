@@ -1,8 +1,8 @@
 import React from "react";
 import { fireEvent, render, screen } from "@testing-library/react";
 import { StyleSheetTestUtils } from "aphrodite";
-import { MessageOne } from "../Messages";
-import One from "./One";
+import { StartTimerMessages } from "../../Messages";
+import StartTimer from "./StartTimer";
 
 const mockedUsedNavigate = jest.fn();
 
@@ -19,8 +19,8 @@ afterEach(() => {
 });
 
 test("Renders header", () => {
-  render(<One />);
-  const header = screen.getByText(MessageOne.TITLE);
+  render(<StartTimer />);
+  const header = screen.getByText(StartTimerMessages.TITLE);
   expect(header).toBeInTheDocument();
 });
 
@@ -28,8 +28,8 @@ test("First click enable the button", () => {
   // const setStateMock = jest.fn();
   // const useStateMock = (useState: any) => [useState, setStateMock];
   // jest.spyOn(React, "useState").mockImplementation(useStateMock);
-  render(<One />);
-  const button = screen.getByText(MessageOne.BUTTON);
+  render(<StartTimer />);
+  const button = screen.getByText(StartTimerMessages.BUTTON);
   fireEvent.click(button);
   // expect(setStateMock).toBeCalledWith(false);
 });

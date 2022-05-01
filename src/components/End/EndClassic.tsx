@@ -4,10 +4,10 @@ import { SiGithub } from "react-icons/si";
 import { toast } from "react-toastify";
 import { StyleSheet, css } from "aphrodite";
 import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
-import { useLock } from "../utils";
-import { PrivateRoutes } from "../PrivateRoutes";
-import { MessageThree, PromptMessage } from "../Messages";
-import logo from "../logo.svg";
+import { useLock } from "../../utils";
+import { PrivateRoutes } from "../../PrivateRoutes";
+import { EndClassicMessages, PromptMessages } from "../../Messages";
+import logo from "../../logo.svg";
 
 const styles = StyleSheet.create({
   grayButton: {
@@ -65,7 +65,7 @@ const styles = StyleSheet.create({
   },
 });
 
-const Three = () => {
+const EndClassic = () => {
   const navigate = useNavigate();
   const [unLockNavigation, setUnlockNavigation] = useState(true);
   const routeChange = () => {
@@ -76,11 +76,11 @@ const Three = () => {
     if (toggleIcon) {
       return;
     } else {
-      toast.success(PromptMessage.THANKS);
+      toast.success(PromptMessages.THANKS);
     }
   });
 
-  useLock(`${PromptMessage.END}`, unLockNavigation);
+  useLock(`${PromptMessages.END}`, unLockNavigation);
 
   const handleUnlockNavigation = () => {
     setToggleIcon(!toggleIcon);
@@ -89,7 +89,7 @@ const Three = () => {
 
   return (
     <>
-      <h1 className={css(styles.title)}>{MessageThree.CONGRATS}</h1>
+      <h1 className={css(styles.title)}>{EndClassicMessages.CONGRATS}</h1>
       {toggleIcon ? (
         <AiOutlineHeart
           onClick={handleUnlockNavigation}
@@ -111,13 +111,13 @@ const Three = () => {
           onClick={routeChange}
         >
           <img src={logo} className={css(styles.appLogo)} alt="logo" /> <br />
-          {MessageThree.GIFT}
+          {EndClassicMessages.GIFT}
         </button>
       </div>
       <div>
         <a
           className={css(styles.footerLink)}
-          href={MessageThree.GITHUB}
+          href={EndClassicMessages.GITHUB}
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -128,4 +128,4 @@ const Three = () => {
   );
 };
 
-export default React.memo(Three);
+export default React.memo(EndClassic);

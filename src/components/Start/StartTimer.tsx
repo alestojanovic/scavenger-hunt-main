@@ -3,9 +3,9 @@ import Countdown from "react-countdown";
 import { useNavigate } from "react-router-dom";
 import { StyleSheet, css } from "aphrodite";
 import { BsFillPatchQuestionFill } from "react-icons/bs";
-import { useUnlock } from "../utils";
-import { PrivateRoutes } from "../PrivateRoutes";
-import { MessageOne, PromptMessage } from "../Messages";
+import { useUnlock } from "../../utils";
+import { PrivateRoutes } from "../../PrivateRoutes";
+import { StartTimerMessages, PromptMessages } from "../../Messages";
 
 const styles = StyleSheet.create({
   timeCounter: {
@@ -67,7 +67,7 @@ const renderer: FC<Props> = ({ hours, minutes, seconds, completed }) => {
 
 let getLocalStorageValue = (s: any) => localStorage.getItem(s);
 
-const One = () => {
+const StartTimer = () => {
   const [data, setData] = useState(
     { date: Date.now(), delay: 86400000 } //Milliseconds
   );
@@ -77,7 +77,7 @@ const One = () => {
     navigate(`${PrivateRoutes.PARAM_TWO}`);
   };
 
-  useUnlock(`${PromptMessage.PASS}`, true);
+  useUnlock(`${PromptMessages.PASS}`, true);
 
   const [enableButton, setEnableButton] = useState(true);
 
@@ -104,7 +104,7 @@ const One = () => {
   return (
     <div>
       <div>
-        <h1>{MessageOne.TITLE}</h1>
+        <h1>{StartTimerMessages.TITLE}</h1>
       </div>
       <span className={css(styles.timeCounter)}>
         <Countdown
@@ -124,7 +124,7 @@ const One = () => {
         />
       </span>
       <p>
-        {MessageOne.HINT}
+        {StartTimerMessages.HINT}
         <BsFillPatchQuestionFill
           onClick={handleEnable}
           className={css(styles.questionIcon)}
@@ -132,15 +132,15 @@ const One = () => {
       </p>
       {enableButton ? (
         <button className={css(styles.redButton)} onClick={handleEnable}>
-          {MessageOne.BUTTON}
+          {StartTimerMessages.BUTTON}
         </button>
       ) : (
         <button className={css(styles.greenButton)} onClick={routeChange}>
-          {MessageOne.BUTTON}
+          {StartTimerMessages.BUTTON}
         </button>
       )}
     </div>
   );
 };
 
-export default One;
+export default StartTimer;
