@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/scavenger-hunt-v1/static/css/main.aa32d420.css",
-    "main.js": "/scavenger-hunt-v1/static/js/main.153c79eb.js",
+    "main.css": "/scavenger-hunt-v1/static/css/main.9aa220dc.css",
+    "main.js": "/scavenger-hunt-v1/static/js/main.daeeeefc.js",
     "static/media/reactHeart.svg": "/scavenger-hunt-v1/static/media/reactHeart.edceb35430eb2cc1cabb.svg",
     "static/media/gift.svg": "/scavenger-hunt-v1/static/media/gift.5f48876c37c299bd572d81b0039d0c1a.svg",
     "static/media/github.svg": "/scavenger-hunt-v1/static/media/github.51aa1f9e734853188793.svg",
     "index.html": "/scavenger-hunt-v1/index.html",
     "static/media/PDBlue.svg": "/scavenger-hunt-v1/static/media/PDBlue.5c677b241af9337eb424.svg",
-    "main.aa32d420.css.map": "/scavenger-hunt-v1/static/css/main.aa32d420.css.map",
-    "main.153c79eb.js.map": "/scavenger-hunt-v1/static/js/main.153c79eb.js.map"
+    "main.9aa220dc.css.map": "/scavenger-hunt-v1/static/css/main.9aa220dc.css.map",
+    "main.daeeeefc.js.map": "/scavenger-hunt-v1/static/js/main.daeeeefc.js.map"
   },
   "entrypoints": [
-    "static/css/main.aa32d420.css",
-    "static/js/main.153c79eb.js"
+    "static/css/main.9aa220dc.css",
+    "static/js/main.daeeeefc.js"
   ]
 }
