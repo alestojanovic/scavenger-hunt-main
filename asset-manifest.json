@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.27cdac08.css",
-    "main.js": "/static/js/main.533deb5e.js",
+    "main.css": "/static/css/main.1df45d22.css",
+    "main.js": "/static/js/main.37e31946.js",
     "static/media/reactHeart.svg": "/static/media/reactHeart.edceb35430eb2cc1cabb.svg",
     "static/media/gift.svg": "/static/media/gift.5f48876c37c299bd572d81b0039d0c1a.svg",
     "static/media/github.svg": "/static/media/github.51aa1f9e734853188793.svg",
     "index.html": "/index.html",
     "static/media/PDBlue.svg": "/static/media/PDBlue.5c677b241af9337eb424.svg",
     "static/media/trello.svg": "/static/media/trello.8124686483bfdf513492.svg",
-    "main.27cdac08.css.map": "/static/css/main.27cdac08.css.map",
-    "main.533deb5e.js.map": "/static/js/main.533deb5e.js.map"
+    "main.1df45d22.css.map": "/static/css/main.1df45d22.css.map",
+    "main.37e31946.js.map": "/static/js/main.37e31946.js.map"
   },
   "entrypoints": [
-    "static/css/main.27cdac08.css",
-    "static/js/main.533deb5e.js"
+    "static/css/main.1df45d22.css",
+    "static/js/main.37e31946.js"
   ]
 }
