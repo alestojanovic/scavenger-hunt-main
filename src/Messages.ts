@@ -1,6 +1,8 @@
 export const StartTimerMessages = {
   START: "Time is up! Refresh to restart the counter.",
-  TITLE: "Happy Hacking",
+  TITLE: "Welcome, here are your pointers: ",
+  POINTERS:
+    "In each level you will have to solve a puzzle to enable the red button, and each level is followed up by a quiz. You have an option to skip any level or quiz but skipping will never take you to the end level.",
   HINT: "This button seems to be broken... can we fix it",
   BUTTON: "You have to start somewhere",
 };

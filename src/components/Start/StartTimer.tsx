@@ -18,6 +18,7 @@ const styles = StyleSheet.create({
   timeCounter: {
     fontSize: "100px",
     color: "var(--react-blue)",
+    lineHeight: "120px",
   },
 });
 
@@ -89,7 +90,12 @@ const StartTimer = () => {
   return (
     <div>
       <div>
-        <Title titleSize="large" label={StartTimerMessages.TITLE} />
+        <Title titleSize="medium" label={StartTimerMessages.TITLE} />
+        <Title
+          titleSize="medium"
+          color="#75f8e2"
+          label={StartTimerMessages.POINTERS}
+        />
       </div>
       <span className={css(styles.timeCounter)}>
         <Countdown
