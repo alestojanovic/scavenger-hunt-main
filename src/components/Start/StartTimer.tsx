@@ -92,7 +92,7 @@ const StartTimer = () => {
       <div>
         <Title titleSize="medium" label={StartTimerMessages.TITLE} />
         <Title
-          titleSize="medium"
+          titleSize="small"
           color="#75f8e2"
           label={StartTimerMessages.POINTERS}
         />

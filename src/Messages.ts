@@ -2,19 +2,19 @@ export const StartTimerMessages = {
   START: "Time is up! Refresh to restart the counter.",
   TITLE: "Welcome, here are your pointers: ",
   POINTERS:
-    "In each level you will have to solve a puzzle to enable the red button, and each level is followed up by a quiz. You have an option to skip any level or quiz but skipping will never take you to the end level.",
+    "In each level you will have to solve a puzzle to enable the red button, each level is followed up by a quiz, all answers must be correct to continue. You have an option to skip any level or quiz but skipping will never take you to the end level.",
   HINT: "This button seems to be broken... can we fix it",
   BUTTON: "You have to start somewhere",
 };
 
 export const LevelOneMessages = {
-  HINT: "When you are programming things often hide in plain sight... you should probably inspect this situation.",
+  HINT: "When you are programming things often hide in plain sight... you should probably inspect element.",
   CONTINUE: "I would click too",
   UNLOCK: "This might help",
 };
 
 export const LevelTwoMessages = {
-  HINT: "You must be a real programmer to solve this one...",
+  HINT: "You can find the the missing button with inspect element",
 };
 
 export const LevelThreeMessages = {
@@ -65,7 +65,8 @@ export const DefaultMessages = {
   FANCY_BUTTON: "I will take you home",
   CONTINUE_BUTTON: "PASS",
   SUBMIT_BUTTON: "Submit",
-  SKIP_BUTTON: "skip",
+  SKIP_LEVEL: "Skip level",
+  SKIP_QUIZ: "Skip quiz",
 };
 
 export const QuizFormMessages = {

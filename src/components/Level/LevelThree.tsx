@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Title } from "../../stories/headers";
 import { PrimaryButton, SkipButton } from "../../stories/buttons/";
-import { useLockNoPrompt, useUnlockNoPrompt } from "../../utils/utils";
+import { useLockNoPrompt, useLockPrompt } from "../../utils/utils";
 import { QuestionForm } from "../../stories/forms/";
 import { PrivateRoutes } from "../../PrivateRoutes";
 import { modes } from "../../flags";
@@ -11,25 +11,19 @@ import {
   QuestionFormMessages,
   TooltipMessages,
   DefaultMessages,
+  PromptMessages,
 } from "../../Messages";
 
 export const LevelThree = () => {
   const navigate = useNavigate();
   const [unLockNavigation, setUnlockNavigation] = useState(true);
-  const [skip, setSkip] = useState(true);
 
-  skip ? useLockNoPrompt(unLockNavigation) : useUnlockNoPrompt(true);
+  modes.promptMode
+    ? useLockPrompt(`${PromptMessages.DEFAULT}`, unLockNavigation)
+    : useLockNoPrompt(unLockNavigation);
 
   const routeChange = () => {
     navigate(`${PrivateRoutes.PARAM_QUIZ_FOUR}`);
-  };
-
-  const routeSkip = () => {
-    navigate(`${PrivateRoutes.PARAM_START_TIMER}`);
-  };
-
-  const handleSkip = () => {
-    setSkip(false);
   };
 
   const handleUnlockNavigation = () => {
@@ -38,10 +32,10 @@ export const LevelThree = () => {
 
   return (
     <div>
-      <Title label={LevelThreeMessages.HINT} />
+      <Title label={LevelThreeMessages.HINT} titleSize="small" />
       <PrimaryButton
-        onClick={skip ? routeChange : routeSkip}
-        primary={skip && unLockNavigation}
+        onClick={routeChange}
+        primary={unLockNavigation}
         size={"small"}
         label={DefaultMessages.CONTINUE_BUTTON}
       />
@@ -58,7 +52,10 @@ export const LevelThree = () => {
         secondPlaceholder={QuestionFormMessages.SECOND_Q_PLACEHOLDER}
       />
       {modes.skipMode && (
-        <SkipButton onClick={handleSkip} label={DefaultMessages.SKIP_BUTTON} />
+        <SkipButton
+          onClick={handleUnlockNavigation}
+          label={DefaultMessages.SKIP_LEVEL}
+        />
       )}
     </div>
   );

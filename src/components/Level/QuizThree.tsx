@@ -39,7 +39,7 @@ export const QuizThree = () => {
       {modes.skipMode && (
         <SkipButton
           onClick={handleUnlockNavigation}
-          label={DefaultMessages.SKIP_BUTTON}
+          label={DefaultMessages.SKIP_QUIZ}
         />
       )}
     </>
