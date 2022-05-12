@@ -17,19 +17,28 @@ In case you would like to try it out locally, you will need to make PrivateRoute
 `PrivateRoutes.ts` template
 
 ```
+import { crypt } from "./utils/cryptoLib";
+
 export const PrivateRoutes = {
   PARAM_START_TIMER: "/",
-  PARAM_LEVEL_ONE: "/stepOne",
-  PARAM_LEVEL_TWO: "/stepTwo",
-  PARAM_LEVEL_THREE: "/stepThree",
-  PARAM_LEVEL_FOUR: "/stepFour",
-  PARAM_END_CLASSIC: "/stepFive",
+  PARAM_LEVEL_ONE: "/levelOne",
+  PARAM_LEVEL_TWO: "/levelTwo",
+  PARAM_LEVEL_THREE: "/levelThree",
+  PARAM_LEVEL_FOUR: "/levelFour",
+  PARAM_QUIZ_ONE: "/quizOne",
+  PARAM_QUIZ_TWO: "/quizTwo",
+  PARAM_QUIZ_THREE: "/quizThree",
+  PARAM_QUIZ_FOUR: "/quizFour",
+  PARAM_END_CLASSIC: "/stepEndClassic",
+  TEST: "/test",
+  PARAM_404: "*",
 };
 
 export const SecretAnswers = {
-  ANSWER_ONE: "YourAnswer",
-  ANSWER_TWO: crypt("salt", "YourAnswer"),
+  ANSWER_ONE: "",
+  ANSWER_TWO: crypt("salt", ""),
 };
+
 ```
 
 ---
