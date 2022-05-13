@@ -154,14 +154,9 @@ export const questionSetThree = [
     correctAnswerIndex: 0,
   },
   {
-    question: "What is Reconciliation?",
-    answers: [
-      "The process through which React deletes the DOM",
-      "The process through which React updates and deletes the component",
-      "It is a process to set the state",
-      "The process through which React updates the DOM",
-    ],
-    correctAnswerIndex: 2,
+    question: "Can we write a comment in SVG file?",
+    answers: ["Yes", "No", "Maybe"],
+    correctAnswerIndex: 0,
   },
 ];
 
@@ -185,7 +180,7 @@ export const questionSetFour = [
   {
     question: "React.js Covers only the view layer of the app.",
     answers: ["Yes", "No", "Maybe"],
-    correctAnswerIndex: 1,
+    correctAnswerIndex: 0,
   },
   {
     question: "What is the DOM?",
@@ -208,8 +203,13 @@ export const questionSetFour = [
     correctAnswerIndex: 1,
   },
   {
-    question: "Can we write a comment in SVG file?",
-    answers: ["Yes", "No", "Maybe"],
-    correctAnswerIndex: 0,
+    question: "What is Reconciliation?",
+    answers: [
+      "The process through which React deletes the DOM",
+      "The process through which React updates and deletes the component",
+      "It is a process to set the state",
+      "The process through which React updates the DOM",
+    ],
+    correctAnswerIndex: 3,
   },
 ];

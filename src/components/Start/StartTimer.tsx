@@ -33,19 +33,21 @@ const Completionist = () => (
 const twoDigits = (num) => String(num).padStart(2, "0");
 
 type Props = {
+  days: any;
   hours: any;
   minutes: any;
   seconds: any;
   completed: any;
 };
 
-const renderer: FC<Props> = ({ hours, minutes, seconds, completed }) => {
+const renderer: FC<Props> = ({ days, hours, minutes, seconds, completed }) => {
   if (completed) {
     return <Completionist />;
   } else {
     return (
       <span>
-        {twoDigits(hours)}:{twoDigits(minutes)}:{twoDigits(seconds)}
+        {twoDigits(days)}:{twoDigits(hours)}:{twoDigits(minutes)}:
+        {twoDigits(seconds)}
       </span>
     );
   }
@@ -55,9 +57,9 @@ let getLocalStorageValue = (s: any) => localStorage.getItem(s);
 
 const StartTimer = () => {
   const [data, setData] = useState(
-    { date: Date.now(), delay: 86400000 } //Milliseconds
+    { date: Date.now(), delay: 950400000 } //Milliseconds
   );
-  const wantedDelay = 86400000; //Milliseconds
+  const wantedDelay = 950400000; //Milliseconds
   const navigate = useNavigate();
   const [unLockNavigation, setUnlockNavigation] = useState(true);
 

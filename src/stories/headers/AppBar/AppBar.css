@@ -14,12 +14,12 @@
 .app-wrapper--dark {
   background: linear-gradient(black, #2a2a2a);
   color: white;
-  box-shadow: 0 0 50px #2a2a2a, 20px 0 80px #2a2a2a;
+  box-shadow: 0 0 10px #2a2a2a, 10px 0 20px #2a2a2a;
 }
 .app-wrapper--light {
   background: linear-gradient(#cecece, white);
   color: #1e1e1e;
-  box-shadow: 0 0 50px #cecece, 20px 0 80px #cecece;
+  box-shadow: 0 0 10px #cecece, 10px 0 20px #cecece;
 }
 
 .app-h1 {

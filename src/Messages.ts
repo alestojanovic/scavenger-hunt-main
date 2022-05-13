@@ -2,7 +2,7 @@ export const StartTimerMessages = {
   START: "Time is up! Refresh to restart the counter.",
   TITLE: "Welcome, here are your pointers: ",
   POINTERS:
-    "In each level you will have to solve a puzzle to enable the red button, each level is followed up by a quiz, all answers must be correct to continue. You have an option to skip any level or quiz but skipping will never take you to the end level.",
+    "In each level you will have to solve a puzzle to enable the red button, each level is followed up by a quiz, all answers must be correct to continue. You have an option to skip any level or quiz by unlocking red button, but skipping will never take you to the end level.",
   HINT: "This button seems to be broken... can we fix it",
   BUTTON: "You have to start somewhere",
 };
@@ -72,7 +72,7 @@ export const DefaultMessages = {
 export const QuizFormMessages = {
   TITLE: "Welcome to React Quiz",
   DESCRIPTION:
-    "This is a simple quiz that you need to solve in order to move on",
+    "This is a simple React quiz that you need to solve in order to move on",
   TITLE_COMPLETE: "Quiz complete!",
   CORRECT_ANSWERS: "You answered ",
   TOTAL_QUESTIONS: " questions correctly out of a total:",
